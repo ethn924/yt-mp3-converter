@@ -1,0 +1,44 @@
+================================================
+  YT-MP3 CONVERTER - MODE D'EMPLOI
+================================================
+
+AVANT DE COMMENCER :
+
+  Au tout premier double-clic sur "Lancer.bat", Windows peut
+  afficher "Windows a protege votre PC" (SmartScreen).
+  C'est normal pour un script non signe numeriquement.
+  Cliquez sur "Informations complementaires" puis
+  "Executer quand meme".
+
+COMMENT L'UTILISER :
+
+  1. Double-cliquez sur "Lancer.bat"
+  2. Si SmartScreen apparait, voir ci-dessus.
+  3. Attendez que le navigateur s'ouvre (30 secondes a
+     2 minutes la premiere fois : telechargement ~130 Mo).
+  4. Collez un lien YouTube dans le champ.
+  5. Cliquez sur "Convertir".
+  6. Cliquez sur "Telecharger".
+
+C'EST TOUT. Aucune installation manuelle requise.
+
+EN CAS DE PROBLEME :
+
+  - Le site ne s'ouvre pas :
+    Ouvrez votre navigateur et tapez http://localhost:3000
+
+  - Erreur ou suppression de "yt-dlp.exe" par l'antivirus :
+    C'est un faux positif connu (voir
+    https://github.com/yt-dlp/yt-dlp/issues/8938).
+    Ajoutez une exception pour le dossier du projet
+    dans votre antivirus, en connaissance de cause.
+
+  - "YouTube a bloque le telechargement (HTTP 403)" :
+    Certaines videos sont protegees. Essayez-en une autre.
+
+  - Pour arreter le serveur :
+    Fermez la fenetre noire (console).
+
+USAGE PERSONNEL UNIQUEMENT.
+Respectez les droits d'auteur et les conditions
+d'utilisation de YouTube.

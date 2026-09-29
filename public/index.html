@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YT-MP3 Converter — Convertir YouTube en MP3</title>
+  <meta name="description" content="Convertissez facilement vos vidéos YouTube en fichiers MP3 de haute qualité. Gratuit, rapide, sécurisé." />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <span class="logo-icon">🎵</span>
+        <span class="logo-text">YT-MP3</span>
+      </div>
+      <nav class="nav">
+        <a href="#converter">Convertisseur</a>
+        <a href="#howto">Comment ça marche</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="converter">
+    <div class="container">
+      <h1 class="hero-title">Convertir YouTube en MP3</h1>
+      <p class="hero-subtitle">
+        Collez le lien d'une vidéo YouTube et téléchargez-la en MP3 haute qualité.
+        <br />Gratuit, rapide et sans inscription.
+      </p>
+
+      <form class="converter-form" id="converter-form">
+        <div class="input-group">
+          <span class="input-icon">🔗</span>
+          <input type="url" id="youtube-url" placeholder="https://www.youtube.com/watch?v=..." required autocomplete="url" />
+        </div>
+        <button type="submit" class="btn btn-primary" id="convert-btn">
+          <span class="btn-text">Convertir</span>
+          <span class="btn-spinner hidden">⏳</span>
+        </button>
+      </form>
+
+      <div id="status" class="status hidden"></div>
+
+      <div id="result" class="result hidden">
+        <div class="result-icon">✅</div>
+        <div class="result-info">
+          <p class="result-title">Conversion terminée !</p>
+          <p class="result-meta" id="result-meta"></p>
+        </div>
+        <a href="#" id="download-link" class="btn btn-success" download>⬇️ Télécharger MP3</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="howto" id="howto">
+    <div class="container">
+      <h2 class="section-title">Comment ça marche ?</h2>
+      <p class="section-subtitle">Trois étapes simples, aucune compétence technique requise.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-icon">📋</div>
+          <h3>Copiez le lien</h3>
+          <p>Ouvrez YouTube, trouvez votre vidéo et copiez l'URL depuis la barre d'adresse ou le bouton "Partager".</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-icon">🎯</div>
+          <h3>Collez et convertissez</h3>
+          <p>Collez le lien dans le champ ci-dessus et cliquez sur "Convertir". Notre serveur extrait l'audio pour vous.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-icon">⬇️</div>
+          <h3>Téléchargez le MP3</h3>
+          <p>Une fois la conversion terminée, cliquez sur le bouton de téléchargement. Votre fichier MP3 est prêt !</p>
+        </div>
+      </div>
+
+      <div class="formats">
+        <h3>Formats acceptés</h3>
+        <div class="format-tags">
+          <span class="tag">youtube.com/watch?v=...</span>
+          <span class="tag">youtu.be/...</span>
+          <span class="tag">music.youtube.com/watch?v=...</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="container">
+      <h2 class="section-title">Questions fréquentes</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Est-ce gratuit ?</summary>
+          <p>Oui, totalement gratuit. Aucune inscription, aucun paiement, aucune limite cachée (dans la limite de 5 conversions par minute par utilisateur).</p>
+        </details>
+        <details class="faq-item">
+          <summary>Quelle qualité audio est utilisée ?</summary>
+          <p>Nous utilisons FFmpeg avec un encodage MP3 VBR de qualité maximale, ce qui donne des fichiers entre ~192 et 320 kbps selon la source.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Combien de temps les fichiers sont-ils conservés ?</summary>
+          <p>Les fichiers MP3 sont automatiquement supprimés du serveur 5 minutes après leur création. Téléchargez votre fichier rapidement.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Pourquoi ma conversion échoue-t-elle parfois ?</summary>
+          <p>Certaines vidéos sont privées, supprimées, ou protégées par des restrictions géographiques ou d'âge. Dans ce cas, la conversion ne peut pas aboutir.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Puis-je télécharger des vidéos protégées par le droit d'auteur ?</summary>
+          <p>Cet outil est destiné à un usage personnel. Respectez les conditions d'utilisation de YouTube et les lois sur le droit d'auteur applicables.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>YT-MP3 Converter — Projet open-source basé sur yt-dlp et FFmpeg.</p>
+      <p class="footer-note">Usage personnel uniquement. Respectez les droits d'auteur.</p>
+    </div>
+  </footer>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿# Dependances
+node_modules/
+
+# Binaires telecharges (recréés au premier lancement)
+bin/
+
+# Configuration
+.env
+.env.local
+.env.production
+
+# Fichiers generes
+downloads/*
+!downloads/.gitkeep
+*.log
+npm-debug.log*
+
+# Systeme
+.DS_Store
+Thumbs.db
+
+# Deploiement
+.netlify/
+dist/
+build/
+
+# Sauvegardes locales
+*.bak
+
+# Residus de tests manuels
+test-*.mp4
+test-*.mp3
