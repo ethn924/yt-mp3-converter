@@ -1,4 +1,6 @@
-﻿# YT-MP3 Converter
+# YT-MP3 Converter
+
+![Node.js](https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white) ![Express](https://img.shields.io/badge/Express-000000?logo=express&logoColor=white) ![yt-dlp](https://img.shields.io/badge/yt--dlp-FF0000) ![FFmpeg](https://img.shields.io/badge/FFmpeg-007808?logo=ffmpeg&logoColor=white) ![Windows](https://img.shields.io/badge/Windows-10%2F11-0078D6?logo=windows&logoColor=white)
 
 Convertisseur YouTube → MP3, local et autonome. Aucune inscription, aucune donnée envoyée à un tiers autre que YouTube.
 
@@ -43,8 +45,20 @@ Les MP3 sont stockés temporairement dans `downloads/` et **supprimés automatiq
 
 ## Structure du projet
 
-
-
+```text
+server.js        serveur Express
+config/          configuration (.env)
+routes/          route de conversion
+services/        appel à yt-dlp + FFmpeg
+middleware/      sécurité (helmet), limite de requêtes, validation d'URL
+utils/           logs, détection de yt-dlp et FFmpeg
+public/          interface web
+Lancer.bat       lancement en un double-clic (via bootstrap.ps1)
+```
 ## Licence
 
 MIT.
+
+---
+
+Réalisé par **Ethan Lalienne** · [GitHub](https://github.com/ethn924) · [Portfolio](https://ethn924.github.io/Portfolio/)
